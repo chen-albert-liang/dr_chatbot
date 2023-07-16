@@ -1,0 +1,8 @@
+langchain
+streamlit_chat
+streamlit
+dotenv
+openai
+os
+pandas
+numpy
