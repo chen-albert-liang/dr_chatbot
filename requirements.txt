@@ -4,5 +4,3 @@ streamlit
 dotenv
 openai
 os
-pandas
-numpy
