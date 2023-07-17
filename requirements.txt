@@ -1,6 +1,6 @@
 langchain
 streamlit_chat
 streamlit
-dotenv
+python-dotenv
 openai
 os

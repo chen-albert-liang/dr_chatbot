@@ -14,11 +14,11 @@ from langchain.chat_models import ChatOpenAI
 import streamlit as st
 from streamlit_chat import message
 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import openai
 import os
 
-# load_dotenv()
+load_dotenv()
 openai.api_key = os.environ["OPENAI_API_KEY"]
 # from langchain.indexes import VectorstoreIndexCreator
 # %% Load FAQ data
