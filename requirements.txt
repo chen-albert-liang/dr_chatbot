@@ -3,3 +3,4 @@ streamlit_chat
 streamlit
 python-dotenv
 openai
+jq
