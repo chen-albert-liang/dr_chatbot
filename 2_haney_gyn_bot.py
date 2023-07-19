@@ -66,11 +66,11 @@ vectorstore = Chroma.from_documents(documents, embeddings)
 
 # %%
 qa_chain = ConversationalRetrievalChain.from_llm(
-    llm=ChatOpenAI(temperature=0, model="gpt-4"),
+    llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k"),
     retriever=vectorstore.as_retriever(),
     condense_question_llm=ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k"),
-    return_source_documents=True
-    # memory=memory,
+    # return_source_documents=True,
+    memory=memory,
 )
 
 
@@ -124,10 +124,11 @@ if st.session_state["generated"]:
             message(st.session_state["generated"][i], key=str(i), avatar_style="thumbs")
 # %%
 # chat_history = []
-# query = "What is menopause?"
-# result = qa({"question": query, "chat_history": chat_history})
+# query = "What is HaneyGYN?"
+# result = qa_chain({"question": query, "chat_history": chat_history})
 # print(result["answer"])
 
+# %%
 # chat_history = [(query, result["answer"])]
 # query = "Did it mention what symptoms menopause causes?"
 # result = qa({"question": query, "chat_history": chat_history})
